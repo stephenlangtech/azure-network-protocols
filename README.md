@@ -62,26 +62,26 @@ You can view each packet sent while pinging the machine in Wireshark, displaying
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/X4yfgee.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next, use the ping -t command to continuously ping the Linux machine. Then, go to the Linux VM in Azure, navigate to Network Settings, and create an inbound port rule to deny ICMP traffic, effectively blocking it on the firewall.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/UvdXvva.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After blocking ICMP traffic on the Linux machine’s firewall, check Wireshark to see that the pings no longer receive replies. In PowerShell, you’ll see a message saying "Request Timed Out."
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/QstVuqS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Afterward, delete the inbound port rule to allow ICMP traffic again. To stop the continuous pinging, press Ctrl + C in PowerShell. 
 </p>
 <br />
 
